@@ -32,7 +32,7 @@ public class Rule {
 	
 	/* Receives a list of string objectives and adds each created Objective in 
 	 * 'objectives' array. 
-     */
+	 */
 	private void addObjectives(String[] objectivesList) {
 		for(String objective : objectivesList) {
 			objectives.add(new Objective(objective));
@@ -40,15 +40,15 @@ public class Rule {
 	}
 	
 	/* Receives a query and returns true if it has the same predicate
-     * as the rule. 
-     */
+	 * as the rule. 
+	 */
 	public boolean samePredicate(Query query) {
 		return this.predicate.equals(query.obtainPredicate());
 	}
 	
 	/* Receives the parameters of a query and maps each rule variable
-     * to its corresponding query parameter. Returns the created map. 
-     */
+	 * to its corresponding query parameter. Returns the created map. 
+	 */
 	public Map<String, String> mapVariables(String[] queryParameters) {
 		Map<String, String> variableMapping = new HashMap<String, String>();
 		int position = 0;

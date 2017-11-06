@@ -15,13 +15,12 @@ public class Parser {
 		Pattern predicate = Pattern.compile(clausePredicatePattern);        
 		Matcher m = predicate.matcher(clause);
 		m.find();
-		return m.group(predicateIndex);
-		
+		return m.group(predicateIndex);		
 	}
 	
 	/* Returns the parameters of the given string 'clause', according to 
-     * the regular expression.
-     */
+	 * the regular expression.
+	 */
 	protected String[] obtainClauseParameters(String clause, String clauseParametersPattern) {
 		int parametersIndex = 1;
 		String parameterSeparator = ",";

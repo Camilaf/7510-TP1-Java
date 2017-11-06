@@ -10,9 +10,9 @@ public class KnowledgeBase {
 	private Validator validator = new Validator();
 	
 	/* Receives a query string and returns true if the rules and facts
-     * in the database imply query, false if not. If the query can't be
-     * parsed, throws an Exception. 
-     */
+	 * in the database imply query, false if not. If the query can't be
+	 * parsed, throws an Exception. 
+	 */
 	public boolean answer(String query) throws Exception {
 		String cleanQuery = query.replace(" ", "").replace("\t", "");
 		if (!validator.isValidQuery(cleanQuery)) {
@@ -51,8 +51,6 @@ public class KnowledgeBase {
 			if (bufferedReader != null) {
 				bufferedReader.close();
 			}
-		}
-		
+		}		
 	}
-
 }

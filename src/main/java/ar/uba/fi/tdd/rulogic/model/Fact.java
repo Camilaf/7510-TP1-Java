@@ -23,15 +23,15 @@ public class Fact {
 	}
 	
 	/* Receives a query and returns true if it has the same predicate
-     * as the fact. 
-     */
+	 * as the fact. 
+	 */
 	public boolean samePredicate(Query query) {
 		return this.predicate.equals(query.obtainPredicate());
 	}
 	
 	/* Receives a query and returns true if it has the same parameters
-     * as the fact. 
-     */
+	 * as the fact. 
+	 */
 	public boolean sameParameters(Query query) {
 		return Arrays.equals(this.parameters, query.obtainParameters());
 	}

@@ -9,7 +9,12 @@ import java.io.*;
 public class App
 {	
 	public static void main (String[] args) throws Exception {
-		String pathToDatabaseFile = args[0];
+		if (args.length != 1) {
+			System.out.println("Please include a path to the database file.");
+			return;
+		}
+		
+		String pathToDatabaseFile = args[0];		
 		String line = null;
 		KnowledgeBase knowledgeBase = new KnowledgeBase();
 		
@@ -24,5 +29,5 @@ public class App
 			System.out.println("Please enter your next query or type 'quit' to exit the application:");
 			line = bufferedReader.readLine();
 		}
-    }
+	}
 }

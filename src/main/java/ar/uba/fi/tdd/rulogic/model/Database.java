@@ -6,10 +6,10 @@ import java.util.*;
 
 public class Database {
 
-	public ArrayList<Fact> facts = new ArrayList<Fact>();
-	public ArrayList<Rule> rules = new ArrayList<Rule>();
+	private ArrayList<Fact> facts = new ArrayList<Fact>();
+	private ArrayList<Rule> rules = new ArrayList<Rule>();
 	
-	/* Receives a parsed fact and adds its corresponding Fact object 
+	/* Receives a string fact and adds its corresponding Fact object 
 	 * to the facts ArrayList. 
 	 */
 	public void addFact(String clause) {
@@ -17,7 +17,7 @@ public class Database {
 		this.facts.add(fact);
 	}
 	
-	/* Receives a parsed rule and adds its corresponding Rule object 
+	/* Receives a string rule and adds its corresponding Rule object 
 	 * to the rules ArrayList. 
 	 */
 	public void addRule(String clause) {
